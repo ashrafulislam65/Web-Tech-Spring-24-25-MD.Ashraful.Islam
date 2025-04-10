@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: aqua;
+    }
+  </style>
+  <script>
+    function formValidation(event) {
+      event.preventDefault(); // prevent form submission
+
+      const name = document.getElementById('user_name').value;
+      const password = document.getElementById('password').value;
+
+      const password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+
+      if (!password_regex.test(password)) {
+        alert("Password must be at least 8 characters, with uppercase, lowercase, and special character.");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <form action="#" method="post" onsubmit="formValidation(event)">
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" name="user_name" id="user_name" required></td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td><input type="number" name="age" required></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="user_mail" required></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td colspan="2">
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+          </td>
+        </tr>
+        <tr>
+          <td><label for="language">Choose a language:</label></td>
+          <td>
+            <select name="language" id="language">
+              <option value="English">English</option>
+              <option value="Bangla">Bangla</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Turkey">Turkey</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" id="password" required></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Submit"></td>
+        </tr>
+      </table>
+    </form>
+  </main>
+  <footer></footer>
+</body>
+</html>
