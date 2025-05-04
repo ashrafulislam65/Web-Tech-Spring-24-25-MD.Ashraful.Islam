@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <button class="btn-nav"><a class="" href="register.html">Register New Employee</a></button>
+            <button class="btn-nav"><a href="employees.html">View Sample Employee List</a></button>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h1 class="form-title">Employee Registration</h1>
+            <form class="reg_form" action="#" method="post" onsubmit="formValidation(event)">
+                <table class="table_style">
+                    <tr class="">
+                        <td>Employee ID:</td>
+                        <td><input type="text" placeholder="EMP123" name="emp_id" id="emp_id" required></td>
+                    </tr>
+                  <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text" name="user_name" id="user_name" required></td>
+                  </tr>
+                  <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="user_mail" required></td>
+                  </tr>
+                  <tr>
+                    <td><label for="department">Choose a department:</label></td>
+                    <td>
+                      <select class="dept" name="department" id="department">
+                        <option value="HR">HR</option>
+                        <option value="Sales">Sales</option>
+                        <option value="IT">IT</option>
+                        <option value="Marketing">Marketing</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Joining Date</td>
+                    <td><input class="date" type="date" required></td>
+                  </tr>
+                  <tr>
+                    <td>Gender:</td>
+                    <td colspan="2">
+                      <input type="radio" name="gender" value="Male">Male
+                      <input type="radio" name="gender" value="Female">Female
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Employee Type:</td>
+                    <td>
+                        <input type="checkbox" name="type1" id="type1" value="Full Time">Full Time
+                        <input type="checkbox" name="type2" id="type2" value="Part Time">Part Time
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan=""><input class="btn-frm" type="submit" value="Submit"></td>
+                    <td colspan=""><input class="btn-frm" type="reset" value="reset"></td>
+                  </tr>
+                </table>
+              </form>
+        </section>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>
