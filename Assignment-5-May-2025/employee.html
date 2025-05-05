@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee List</title>
     <link rel="stylesheet" href="style.css">
     <script>
-         function row_delete(){
-            row=document.getElementById("tr");
+        function row_delete() {
+            row = document.getElementById("tr");
             row.remove();
 
-         }
+        }
+        function showForm(event){
+            document.getElementById("showForm").style.display = "block";
+        }
+        
+        function updateForm(event){
+            event.preventDefault();
+           
+            document.getElementById("emId").innerText=document.getElementById("editId").value;
+            
+        }
+        
+        
     </script>
 </head>
+
 <body>
     <header>
         <nav class="nav-bar">
@@ -32,17 +46,17 @@
                     <th>Gender</th>
                     <th>Employee Type</th>
                     <th>Option</th>
-                    
+
                 </tr>
                 <tr id="tr">
-                    <td>EMP887</td>
-                    <td>Ilham Rahman</td>
-                    <td>ilhamrahman107@gmail.com</td>
-                    <td>HR</td>
-                    <td>05/05/2025</td>
-                    <td>Female</td>
-                    <td>Full-Time</td>
-                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                    <td id="emId">EMP887</td>
+                    <td id="emName">Ilham Rahman</td>
+                    <td id="email">ilhamrahman107@gmail.com</td>
+                    <td id="dept">HR</td>
+                    <td id="date">05/05/2025</td>
+                    <td id="gender">Female</td>
+                    <td id="type">Full-Time</td>
+                    <td><button>Add</button><button onclick="showForm(event)">Edit</button><button onclick="row_delete()">Delete</button></td>
                 </tr>
                 <tr id="tr">
                     <td>EMP887</td>
@@ -86,8 +100,23 @@
                 </tr>
             </table>
         </section>
+        <section class="edit-container" id="showForm" >
+            <h3>Edit Employee</h3>
+            <form id="editForm" onsubmit="updateForm(event)" >
+              <input type="text" id="editId" placeholder="Employee ID" required />
+              <input type="text" id="editName" placeholder="Full Name" required />
+              <input type="email" id="editEmail" placeholder="Email" required />
+              <input type="text" id="editDept" placeholder="Department" required />
+              <input type="date" id="editDate" required />
+              <input type="text" id="editGender" placeholder="Gender" required />
+              <input type="text" id="editType" placeholder="Employee Type" required />
+              <button type="button" onclick="" >Save</button>
+            </form>
+        </section>
+        
     </main>
     <footer></footer>
-    
+
 </body>
+
 </html>

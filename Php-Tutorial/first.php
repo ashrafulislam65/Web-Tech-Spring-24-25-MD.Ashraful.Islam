@@ -14,6 +14,7 @@
        $first_Name = "Mr.x";
        $second_Name="Il";
        echo "Full Name:".$First_Name.$second_Name;
+       
     ?>
 </body>
 </html>

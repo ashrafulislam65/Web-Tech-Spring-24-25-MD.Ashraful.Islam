@@ -68,3 +68,6 @@
     border: 2px solid #93b873;
 
 }
+.edit-container{
+    display: none;
+}
