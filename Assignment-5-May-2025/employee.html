@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+         function row_delete(){
+            row=document.getElementById("tr");
+            row.remove();
+
+         }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <button class="btn-nav"><a class="" href="register.html">Register New Employee</a></button>
+            <button class="btn-nav"><a href="employees.html">View Sample Employee List</a></button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <table>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Joining Date</th>
+                    <th>Gender</th>
+                    <th>Employee Type</th>
+                    <th>Option</th>
+                    
+                </tr>
+                <tr id="tr">
+                    <td>EMP887</td>
+                    <td>Ilham Rahman</td>
+                    <td>ilhamrahman107@gmail.com</td>
+                    <td>HR</td>
+                    <td>05/05/2025</td>
+                    <td>Female</td>
+                    <td>Full-Time</td>
+                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                </tr>
+                <tr id="tr">
+                    <td>EMP887</td>
+                    <td>Ilham Rahman</td>
+                    <td>ilhamrahman107@gmail.com</td>
+                    <td>HR</td>
+                    <td>05/05/2025</td>
+                    <td>Female</td>
+                    <td>Full-Time</td>
+                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                </tr>
+                <tr id="tr">
+                    <td>EMP887</td>
+                    <td>Ilham Rahman</td>
+                    <td>ilhamrahman107@gmail.com</td>
+                    <td>HR</td>
+                    <td>05/05/2025</td>
+                    <td>Female</td>
+                    <td>Full-Time</td>
+                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                </tr>
+                <tr id="tr">
+                    <td>EMP887</td>
+                    <td>Ilham Rahman</td>
+                    <td>ilhamrahman107@gmail.com</td>
+                    <td>HR</td>
+                    <td>05/05/2025</td>
+                    <td>Female</td>
+                    <td>Full-Time</td>
+                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                </tr>
+                <tr id="tr">
+                    <td>EMP887</td>
+                    <td>Ilham Rahman</td>
+                    <td>ilhamrahman107@gmail.com</td>
+                    <td>HR</td>
+                    <td>05/05/2025</td>
+                    <td>Female</td>
+                    <td>Full-Time</td>
+                    <td><button>Add</button><button>Edit</button><button onclick="row_delete()">Delete</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

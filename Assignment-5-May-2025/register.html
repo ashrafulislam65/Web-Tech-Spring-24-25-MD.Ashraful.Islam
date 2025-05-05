@@ -46,7 +46,7 @@
                     </tr>
                     <tr>
                         <td>Joining Date</td>
-                        <td><input class="date" type="date" id="joiningDate" ></td>
+                        <td><input class="date" type="date" id="joiningDate"></td>
                     </tr>
                     <tr>
                         <td>Gender:</td>
@@ -60,16 +60,16 @@
                         <td>Employee Type:</td>
                         <td>
                             <input type="checkbox" name="type" id="type1" value="Full Time">Full Time
-                            <input type="checkbox"  name="type" id="type2" value="Part Time">Part Time
+                            <input type="checkbox" name="type" id="type2" value="Part Time">Part Time
                         </td>
                     </tr>
                     <tr>
                         <td colspan=""><input class="btn-frm" type="submit" value="Submit"></td>
-                        <td colspan=""><input class="btn-frm" type="reset" value="reset"></td>
+                        <td colspan=""><input class="btn-frm" id="reset" type="reset" value="reset"></td>
                     </tr>
                 </table>
             </form>
-           
+
         </section>
         <section class="output" id="output">
 
@@ -93,47 +93,52 @@
                 alert("Employee ID must start with 'EMP' followed by 3 digits (e.g., EMP123).");
                 return false;
             }
-            if(!name_regex.test(name)){
+            if (!name_regex.test(name)) {
                 alert("Name should only contain letters and spaces.");
                 return false;
             }
-            if(!email_regex.test(email)){
+            if (!email_regex.test(email)) {
                 alert("Invalid email format.");
                 return false;
             }
-            if(!department){
+            if (!department) {
                 alert("please select a department");
                 return false;
             }
-            if(!joiningDate){
+            if (!joiningDate) {
                 alert("please select a joining Date");
                 return false;
             }
-            if(!genderEl){
+            if (!genderEl) {
                 alert("please select a gender");
                 return false;
             }
-            if(!empType){
+            if (!empType) {
                 alert("Employee Type must be selected");
                 return false;
             }
             alert('successful')
 
+
             const result = document.getElementById("output");
-            result.innerHTML=
-           `
-                 <h2>Employee registered successfully</h2>
-                <p><small>ID:</small>${empId}</p>
-                <p><small>Name:</small>${name}</p>
-                <p><small>Email:</small>${email}</p>
-                <p><small>Department:</small>${department}</p>
-                <p><small>Joining Date:</small>${joiningDate}</p>
-                <p><small>Gender:</small>${genderEl.value}</p>
-                <p><small>Employee Type:</small>${empType.value}</p>
+            result.innerHTML =
+                `
+                 <div>
+                    <h2>Employee registered successfully</h2>
+                    <p><small>ID:</small>${empId}</p>
+                    <p><small>Name:</small>${name}</p>
+                    <p><small>Email:</small>${email}</p>
+                    <p><small>Department:</small>${department}</p>
+                    <p><small>Joining Date:</small>${joiningDate}</p>
+                    <p><small>Gender:</small>${genderEl.value}</p>
+                    <p><small>Employee Type:</small>${empType.value}</p>
+                    
+                </div>
 
                 
 
            `
+            document.getElementById("reset").reset();
         }
     </script>
 
